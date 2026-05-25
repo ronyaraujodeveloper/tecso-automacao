@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>Dashboard Tecso</h1>
+    <p>Gerencie seus produtos e automações:</p>
+    
+    <div style="display: flex; gap: 10px; justify-content: center;">
+        <button onclick="executarAutomacao()" class="btn">Executar Automação</button>
+        <button onclick="verificarStatus()" class="btn" style="background:#28a745;">Ver Status do TikTok</button>
+    </div>
+</div>
+
+<script>
+    function executarAutomacao() {
+        alert("Chamando sua API de automação...");
+        // Aqui você faria um fetch para o seu endpoint da Vercel
+        fetch('https://tecso-automacao.vercel.app/api/Orquwtrador/ExecutarProcessamento', { method: 'POST' })
+            .then(response => alert("Automação iniciada!"));
+    }
+</script>
